@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Поздравление с Днем Рождения!</title>
+    
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        overflow: hidden;
+    }
+
+    img {
+        width: 400px;
+    }
+
+    .container {
+        text-align: center;
+        padding: 50px;
+        position: relative;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        margin-top: 20px;
+    }
+
+    @keyframes birthdayAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .container h1 {
+        animation: birthdayAnimation 3s infinite;
+    }
+
+    .balloon {
+        position: absolute;
+        width: 50px;
+        height: 100px;
+        background-color: #FF6384;
+        border-radius: 50% 50% 60% 60%;
+        animation: balloonAnimation 4s infinite ease-in-out, moveUpDown 6s infinite;
+    }
+
+    @keyframes balloonAnimation {
+        0%, 100% { transform: translateY(0) scale(0.9); }
+        50% { transform: translateY(-200vh) scale(1.2); }
+    }
+
+    @keyframes moveUpDown {
+        0%, 100% { top: -100px; }
+        50% { top: 100vh; }
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>С Днем Рождения! Дорогая Мамочка!</h1>
+        <div class="image-container">
+            <img src="assets/IMG_20211229_124811.jpg" alt="Фото мамы">
+            <img src="assets/IMG_20220106_145928.jpg" alt="Фото мамы">
+        </div>
+        <p>Пусть этот день будет полон счастья и радости! </p>
+        <div class="balloon" style="top: -20px; left: 20%;"></div>
+        <div class="balloon" style="top: -50px; left: 40%;"></div>
+        <div class="balloon" style="top: -10px; left: 60%;"></div>
+        <div class="balloon" style="top: -80px; left: 80%;"></div>
+        <!-- Добавьте еще шаров по аналогии -->
+    </div>
+</body>
+</html>
+
+
